@@ -15,6 +15,21 @@ namespace CokluBaglıListe
         public Form1()
         {
             InitializeComponent();
+       
+        
+        }
+
+
+        class Dugum
+        {
+            public int numara;
+
+            public Dugum sonraki;
+
+            public Dugum(int numara)
+            {
+                this.numara = numara;
+            }
         }
 
         class CiftDugum
@@ -293,6 +308,80 @@ namespace CokluBaglıListe
             urunGuncelleFiyat.Enabled = true;
 
             
+        }
+
+
+
+        Dugum ilkStack = null;
+        Dugum sonStack = null;
+
+        private void btnEkleStack_Click(object sender, EventArgs e)
+        {
+            int no = Convert.ToInt32(stackYeniEkle.Text);
+
+            Dugum yeni = new Dugum(no);
+
+            if(yeni == null)
+            {
+                ilkStack = yeni;
+                ilkStack.sonraki = null;
+                sonStack = ilkStack;
+            }
+            else
+            {
+                yeni.sonraki = ilkStack;
+                ilkStack = yeni;
+            }
+
+            dataGridViewStack.Rows.Clear();
+            int rows = 0;
+            Dugum gecici = ilkStack;
+            while (gecici != null)
+            {
+                dataGridViewStack.Rows.Add();
+
+                dataGridViewStack.Rows[rows].Cells[0].Value = gecici.numara.ToString();
+
+                rows++;
+                gecici = gecici.sonraki;
+            }
+
+            stackYeniEkle.Text = "";
+        }
+
+        private void btnCıkarStack_Click(object sender, EventArgs e)
+        {
+             if(ilkStack == null)
+            {
+                ilkStack = null;
+            }
+            else
+            {
+                ilkStack = ilkStack.sonraki;
+            }
+
+            Dugum gecici = ilkStack;
+            dataGridViewStack.Rows.Clear();
+            int rows = 0;
+
+            while (gecici != null)
+            {
+                dataGridViewStack.Rows.Add();
+
+                dataGridViewStack.Rows[rows].Cells[0].Value = gecici.numara.ToString();
+
+                rows ++;
+
+                gecici = gecici.sonraki;
+
+            }
+
+
+        }
+
+        private void Stack_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
