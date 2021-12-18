@@ -1,3 +1,4 @@
 # DoublyLinkedList--CiftYonluBagliListe
 
-<img src="foto.png" >
+<img src="doublyLinkedList.png" >
+<img src="stack.png">
