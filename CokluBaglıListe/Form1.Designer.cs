@@ -133,6 +133,7 @@ namespace CokluBaglıListe
             this.dataGridView.RowTemplate.Height = 25;
             this.dataGridView.Size = new System.Drawing.Size(485, 198);
             this.dataGridView.TabIndex = 47;
+            this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
             // Column1
             // 
@@ -187,6 +188,7 @@ namespace CokluBaglıListe
             this.btnUrunleriListele.TabIndex = 44;
             this.btnUrunleriListele.Text = "Ürünleri Listele";
             this.btnUrunleriListele.UseVisualStyleBackColor = true;
+            this.btnUrunleriListele.Click += new System.EventHandler(this.btnUrunleriListele_Click);
             // 
             // groupBox2
             // 
@@ -212,6 +214,7 @@ namespace CokluBaglıListe
             this.urunGuncellemeBul.TabIndex = 31;
             this.urunGuncellemeBul.Text = "Bul";
             this.urunGuncellemeBul.UseVisualStyleBackColor = true;
+            this.urunGuncellemeBul.Click += new System.EventHandler(this.urunGuncellemeBul_Click);
             // 
             // label9
             // 
@@ -293,6 +296,7 @@ namespace CokluBaglıListe
             this.urunSilmeBul.TabIndex = 22;
             this.urunSilmeBul.Text = "Bul";
             this.urunSilmeBul.UseVisualStyleBackColor = true;
+            this.urunSilmeBul.Click += new System.EventHandler(this.urunSilmeBul_Click);
             // 
             // label6
             // 
@@ -441,6 +445,7 @@ namespace CokluBaglıListe
             this.btnGüncelle.TabIndex = 39;
             this.btnGüncelle.Text = "Güncelle";
             this.btnGüncelle.UseVisualStyleBackColor = true;
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // label12
             // 
@@ -462,6 +467,7 @@ namespace CokluBaglıListe
             this.btnSil.TabIndex = 37;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // label5
             // 
@@ -482,6 +488,7 @@ namespace CokluBaglıListe
             this.btnEkle.TabIndex = 35;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label1
             // 
