@@ -383,5 +383,75 @@ namespace CokluBaglıListe
         {
 
         }
+
+        private void btnMatematikselIfadeyiKontrolEt_Click(object sender, EventArgs e)
+        {
+            matIfadeHata.Visible = false;
+            String matIfade = txtMatematikselIfade.Text;
+
+
+            Char[] arrayMatDizi= matIfade.ToCharArray();
+
+
+            Stack<Char> stack = new Stack<Char>();
+
+
+            for (int i = 0; i < arrayMatDizi.Length; i++)
+            {
+
+                
+                if (arrayMatDizi[i] == '(' || arrayMatDizi[i] == '[' || arrayMatDizi[i] == '{')
+                {
+                    stack.Push(arrayMatDizi[i]);
+                   
+                }
+                else if (arrayMatDizi[i] == ')' || arrayMatDizi[i] == ']' || arrayMatDizi[i] == '}')
+                {
+                    if(stack.Count == 0)
+                    {
+                        matIfadeHata.Visible = true;
+                    }
+                    else {
+                        char a = '(';
+                        if(stack.Peek() == '(')
+                        {
+                            a = ')';
+                        }else if(stack.Peek() == '[')
+                        {
+                            a = ']';
+                        }else if(stack.Peek() == '{')
+                        {
+                            a = '}';
+                        }
+                       
+
+
+                        if(arrayMatDizi[i] != a)
+                        {
+                            matIfadeHata.Visible = true;
+                        }
+                        else
+                        {
+                            stack.Pop();
+                        }
+
+                        
+                    }
+                }
+
+                if (i == arrayMatDizi.Length - 1)
+                {
+                    if (stack.Count != 0)
+                    {
+                        matIfadeHata.Visible = true;
+                    }
+                }
+
+
+            }
+
+
+
+        }
     }
 }

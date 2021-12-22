@@ -75,6 +75,11 @@ namespace CokluBaglıListe
             this.btnCıkarStack = new System.Windows.Forms.Button();
             this.btnEkleStack = new System.Windows.Forms.Button();
             this.stackYeniEkle = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnMatematikselIfadeyiKontrolEt = new System.Windows.Forms.Button();
+            this.txtMatematikselIfade = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.matIfadeHata = new System.Windows.Forms.Label();
             this.TabLayout.SuspendLayout();
             this.DoublyLinkedList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -83,12 +88,14 @@ namespace CokluBaglıListe
             this.UrunEkleme.SuspendLayout();
             this.Stack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStack)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabLayout
             // 
             this.TabLayout.Controls.Add(this.DoublyLinkedList);
             this.TabLayout.Controls.Add(this.Stack);
+            this.TabLayout.Controls.Add(this.tabPage1);
             this.TabLayout.Location = new System.Drawing.Point(-1, 0);
             this.TabLayout.Name = "TabLayout";
             this.TabLayout.SelectedIndex = 0;
@@ -572,6 +579,61 @@ namespace CokluBaglıListe
             this.stackYeniEkle.Size = new System.Drawing.Size(94, 39);
             this.stackYeniEkle.TabIndex = 0;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.matIfadeHata);
+            this.tabPage1.Controls.Add(this.btnMatematikselIfadeyiKontrolEt);
+            this.tabPage1.Controls.Add(this.txtMatematikselIfade);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1018, 678);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Parantez Kontrol";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnMatematikselIfadeyiKontrolEt
+            // 
+            this.btnMatematikselIfadeyiKontrolEt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMatematikselIfadeyiKontrolEt.Location = new System.Drawing.Point(537, 124);
+            this.btnMatematikselIfadeyiKontrolEt.Name = "btnMatematikselIfadeyiKontrolEt";
+            this.btnMatematikselIfadeyiKontrolEt.Size = new System.Drawing.Size(151, 61);
+            this.btnMatematikselIfadeyiKontrolEt.TabIndex = 2;
+            this.btnMatematikselIfadeyiKontrolEt.Text = "Yığın Yapısı İle Kontrol Et";
+            this.btnMatematikselIfadeyiKontrolEt.UseVisualStyleBackColor = true;
+            this.btnMatematikselIfadeyiKontrolEt.Click += new System.EventHandler(this.btnMatematikselIfadeyiKontrolEt_Click);
+            // 
+            // txtMatematikselIfade
+            // 
+            this.txtMatematikselIfade.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMatematikselIfade.Location = new System.Drawing.Point(334, 124);
+            this.txtMatematikselIfade.Name = "txtMatematikselIfade";
+            this.txtMatematikselIfade.Size = new System.Drawing.Size(149, 29);
+            this.txtMatematikselIfade.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(334, 77);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(344, 25);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "İstediğiniz Matematiksel İfadeyi Giriniz";
+            // 
+            // matIfadeHata
+            // 
+            this.matIfadeHata.AutoSize = true;
+            this.matIfadeHata.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.matIfadeHata.ForeColor = System.Drawing.Color.Red;
+            this.matIfadeHata.Location = new System.Drawing.Point(334, 220);
+            this.matIfadeHata.Name = "matIfadeHata";
+            this.matIfadeHata.Size = new System.Drawing.Size(333, 25);
+            this.matIfadeHata.TabIndex = 3;
+            this.matIfadeHata.Text = "Hata! Matemetiksel ifade uygun değil";
+            this.matIfadeHata.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -593,6 +655,8 @@ namespace CokluBaglıListe
             this.Stack.ResumeLayout(false);
             this.Stack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStack)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -647,6 +711,11 @@ namespace CokluBaglıListe
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridViewStack;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btnMatematikselIfadeyiKontrolEt;
+        private System.Windows.Forms.TextBox txtMatematikselIfade;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label matIfadeHata;
     }
 }
 
